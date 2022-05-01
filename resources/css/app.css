@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/**
+* Custom heading sizes
+*/
+h1 {
+    @apply mt-6 text-center text-3xl font-extrabold text-gray-900;
+}
+
+h2 {
+    @apply mt-6 text-center text-2xl font-extrabold text-gray-900;
+}
+
+h3 {
+    @apply mt-6 text-center text-xl font-extrabold text-gray-900;
+}

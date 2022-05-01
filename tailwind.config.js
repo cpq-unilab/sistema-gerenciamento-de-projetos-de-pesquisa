@@ -1,13 +1,15 @@
 module.exports = {
-  content: [
-    "./resources/**/*.blade.php",
-    "./resources/**/*.js",
-  ],
-  theme: {
-    extend: {},
-    container: {
-      center: true,
+    content: [
+        "./resources/**/*.blade.php",
+        "./resources/**/*.js",
+    ],
+    theme: {
+        extend: {},
+        container: {
+            center: true,
+        },
     },
-  },
-  plugins: [],
+    plugins: [
+        require('@tailwindcss/forms'),
+    ],
 }

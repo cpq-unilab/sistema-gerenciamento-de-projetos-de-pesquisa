@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="h-full bg-gray-50">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,11 @@
     <title>Proppg | Gerenciamento Projetos de Pesquisa</title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body class="bg-light">
-    <div class="2xl:container border">
+
+<body class="h-full">
+    <div class="container">
         @yield('content')
     </div>
-    
 </body>
+
 </html>
