@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Admin;
+use App\Models\Notice;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\View;
@@ -41,7 +42,14 @@ class AuthController extends Controller
     public function dashboard()
     {
         $user = Auth::guard('admin')->user();
-        return view('admin.dashboard', compact('user'));
+        $cards = [
+            'notices' => [
+                'count' => Notice::count(),
+                'label' => 'Editais',
+            ],
+        ];
+
+        return view('admin.dashboard', compact('user', 'cards'));
     }
 
     public function rememberForm()

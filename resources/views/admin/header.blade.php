@@ -3,13 +3,14 @@
         <div class="flex justify-between items-center py-6 md:justify-start md:space-x-10">
             <div class="flex justify-start lg:w-0 lg:flex-1">
                 <a href="{{route('admin.dashboard')}}">
-                    <span class="sr-only">Workflow</span>
                     <img class="h-10 bg-white rounded p-2 w-auto sm:h-16 " src="{{asset('images/logo-proppg.jpg')}}"
                         alt="Workflow">
                 </a>
             </div>
 
-            <h2 class="m-0 text-white">Área administrativa</h2>
+            <a href="{{route('admin.dashboard')}}">
+                <h2 class="m-0 text-white">Área administrativa</h2>
+            </a>
 
             <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
                 <a href="#" class="whitespace-nowrap text-base font-medium text-white hover:text-gray-200">
