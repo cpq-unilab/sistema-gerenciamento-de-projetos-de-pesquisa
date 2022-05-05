@@ -3,8 +3,6 @@
 @section('content')
 @include('admin.header')
 
-{{var_dump($notices)}}
-
-
+{{$notices}}
 
 @endsection

@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('number', 2);
             $table->string('year', 4);
             $table->string('code');
-            $table->string('desription');
+            $table->string('description');
 
             $table->dateTime('submission_start');
             $table->dateTime('submission_end');

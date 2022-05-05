@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Admin;
 use App\Models\Notice;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\View;
 use Symfony\Component\HttpFoundation\Response;
@@ -14,10 +15,7 @@ class AuthController extends Controller
 {
     public function login()
     {
-        if (View::exists('admin.login')) {
-            return view('admin.login');
-        }
-        abort(Response::HTTP_NOT_FOUND);
+        return view('admin.login');
     }
 
     public function check(Request $request)

@@ -17,30 +17,10 @@ class AdminSeeder extends Seeder
     {
         $admins = [
             [
-                'name' => 'Renato Paiva',
-                'email' => 'renatopaiva@unilab.edu.br',
+                'name' => 'admin',
+                'email' => 'admin@admin.com.br',
                 'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
-            ],
-            [
-                'name' => 'Ivanyele Costa',
-                'email' => 'ivanyele@unilab.edu.br',
-                'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
-            ],
-            [
-                'name' => 'Allberson Dantas',
-                'email' => 'allberson@unilab.edu.br',
-                'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
-            ],
-            [
-                'name' => 'Diego Castro',
-                'email' => 'diegodsccastro@unilab.edu.br',
-                'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
-            ],
-            [
-                'name' => 'Lucas Maciel',
-                'email' => 'lucasmaciel6690@gmail.com',
-                'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
-            ],
+            ]
         ];
 
         foreach ($admins as $admin) {
