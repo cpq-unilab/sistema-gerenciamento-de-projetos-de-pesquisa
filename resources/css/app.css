@@ -16,3 +16,43 @@ h2 {
 h3 {
     @apply mt-6 text-center text-xl font-extrabold text-gray-900;
 }
+
+.btn {
+    @apply py-2 px-6 rounded-md border text-sm font-medium cursor-pointer;
+}
+
+.btn-indigo{
+    @apply text-white bg-indigo-600 border-indigo-900 inline-block border-indigo-900; 
+}
+
+.btn-indigo:hover{
+    @apply bg-indigo-700;
+}
+
+.table{
+    @apply mx-auto;
+}
+
+.table thead{
+    @apply border-b;
+}
+
+.table tbody tr td {
+    @apply border-b;
+}
+
+.table tr:hover{
+    @apply bg-gray-100;
+}
+
+/**
+Forms
+*/
+
+.form-control{
+    @apply appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 sm:text-sm;
+}
+
+.form-control:focus{
+    @apply outline-none ring-indigo-500 border-indigo-500 z-10;
+}

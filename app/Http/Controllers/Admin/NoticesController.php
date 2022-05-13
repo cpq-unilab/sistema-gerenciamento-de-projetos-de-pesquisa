@@ -81,4 +81,5 @@ class NoticesController extends Controller
 
         return view('admin.notices.index', compact('notices'));
     }
+
 }
