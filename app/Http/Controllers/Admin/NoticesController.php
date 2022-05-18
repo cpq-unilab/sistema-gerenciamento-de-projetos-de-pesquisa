@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreNoticeRequest;
 use App\Models\Notice;
+use GuzzleHttp\Promise\Create;
 use Illuminate\Http\Request;
 
 class NoticesController extends Controller
@@ -25,17 +27,11 @@ class NoticesController extends Controller
         return view('admin.notices.create');
     }
 
-    public function store(Request $request)
+    public function store(StoreNoticeRequest $request)
     {
-        $this->validate($request, [
-            'title' => 'required|max:255',
-            'content' => 'required',
-        ]);
 
-        $notice = new Notice();
-        $notice->title = $request->title;
-        $notice->content = $request->content;
-        $notice->save();
+        dd($request->all());
+        $notice = Notice::create($request->all());
 
         return redirect()->route('admin.notices.index')->with('success', 'Notice created successfully.');
     }
@@ -81,5 +77,4 @@ class NoticesController extends Controller
 
         return view('admin.notices.index', compact('notices'));
     }
-
 }

@@ -3,5 +3,11 @@
     "/css/app.css": "/css/app.css",
     "/images/logo-proppg.jpg": "/images/logo-proppg.jpg",
     "/images/logo-proppg.svg": "/images/logo-proppg.svg",
-    "/images/logo-unilab.png": "/images/logo-unilab.png"
+    "/images/logo-unilab.png": "/images/logo-unilab.png",
+    "/flowbite/datepicker.js": "/flowbite/datepicker.js",
+    "/flowbite/datepicker.js.map": "/flowbite/datepicker.js.map",
+    "/flowbite/flowbite.css": "/flowbite/flowbite.css",
+    "/flowbite/flowbite.js": "/flowbite/flowbite.js",
+    "/flowbite/flowbite.js.map": "/flowbite/flowbite.js.map",
+    "/flowbite/flowbite.min.css": "/flowbite/flowbite.min.css"
 }

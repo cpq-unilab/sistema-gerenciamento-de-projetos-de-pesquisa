@@ -2,6 +2,7 @@ module.exports = {
     content: [
         "./resources/**/*.blade.php",
         "./resources/**/*.js",
+        "./node_modules/flowbite/**/*.js",
     ],
     theme: {
         extend: {},
@@ -11,5 +12,6 @@ module.exports = {
     },
     plugins: [
         require('@tailwindcss/forms'),
+        require('flowbite/plugin')
     ],
 }

@@ -13,6 +13,7 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
     .copyDirectory('resources/images', 'public/images')
+    .copyDirectory('node_modules/flowbite/dist', 'public/flowbite')
     .postCss('resources/css/app.css', 'public/css', [
         require("tailwindcss"),
     ]);

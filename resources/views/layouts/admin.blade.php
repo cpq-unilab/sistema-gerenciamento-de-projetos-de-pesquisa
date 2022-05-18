@@ -13,6 +13,9 @@
     <div class="container">
         @yield('content')
     </div>
+    <script src="/flowbite/flowbite.js"></script>
+    <script src="/flowbite/datepicker.js"></script>
+
 </body>
 
 </html>
