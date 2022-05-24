@@ -11,7 +11,27 @@ class Notice extends Model
 {
     use HasFactory;
 
-    public function submission_start(): Attribute
+    protected $fillable = [
+        'number',
+        'year',
+        'code',
+        'description',
+        'submission_start',
+        'submission_end',
+        'submission_appeal_start',
+        'submission_appeal_end',
+        'evaluation_start',
+        'evaluation_end',
+        'evaluation_appeal_start',
+        'evaluation_appeal_end',
+        'execution_start',
+        'execution_end',
+        'continuous_flow',
+        'file_path',
+        'archived',
+    ];
+
+    public function submissionStart(): Attribute
     {
         return new Attribute(
             get: fn ($value) => $value,
@@ -19,7 +39,7 @@ class Notice extends Model
         );
     }
 
-    public function submission_end(): Attribute
+    public function submissionEnd(): Attribute
     {
         return new Attribute(
             get: fn ($value) => $value,
@@ -27,7 +47,7 @@ class Notice extends Model
         );
     }
 
-    public function submission_appeal_start(): Attribute
+    public function submissionAppealStart(): Attribute
     {
         return new Attribute(
             get: fn ($value) => $value,
@@ -35,7 +55,7 @@ class Notice extends Model
         );
     }
 
-    public function submission_appeal_end(): Attribute
+    public function submissionAppealEnd(): Attribute
     {
         return new Attribute(
             get: fn ($value) => $value,
@@ -43,7 +63,7 @@ class Notice extends Model
         );
     }
 
-    public function evaluation_start(): Attribute
+    public function evaluationStart(): Attribute
     {
         return new Attribute(
             get: fn ($value) => $value,
@@ -51,7 +71,7 @@ class Notice extends Model
         );
     }
 
-    public function evaluation_end(): Attribute
+    public function evaluationEnd(): Attribute
     {
         return new Attribute(
             get: fn ($value) => $value,
@@ -59,7 +79,7 @@ class Notice extends Model
         );
     }
 
-    public function evaluation_appeal_start(): Attribute
+    public function evaluationAppealStart(): Attribute
     {
         return new Attribute(
             get: fn ($value) => $value,
@@ -67,7 +87,7 @@ class Notice extends Model
         );
     }
 
-    public function evaluation_appeal_end(): Attribute
+    public function evaluationAppealEnd(): Attribute
     {
         return new Attribute(
             get: fn ($value) => $value,
@@ -75,7 +95,7 @@ class Notice extends Model
         );
     }
 
-    public function execution_start(): Attribute
+    public function executionStart(): Attribute
     {
         return new Attribute(
             get: fn ($value) => $value,
@@ -83,7 +103,7 @@ class Notice extends Model
         );
     }
 
-    public function execution_end(): Attribute
+    public function executionEnd(): Attribute
     {
         return new Attribute(
             get: fn ($value) => $value,

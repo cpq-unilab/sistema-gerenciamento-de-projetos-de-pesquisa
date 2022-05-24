@@ -3,7 +3,7 @@
 @section('content')
 @include('admin.header')
 
-<h2>Importar editais do Sigaa</h2>
+<h2>Cadastrar novo edital</h2>
 
 <form action="{{route('admin.notices.store')}}" method="post">
     @csrf
@@ -13,11 +13,6 @@
     'f' ? '' : 'checked'}} />
 
     <br />
-
-    <input class="form-control" type="text" id="id_sigaa" name="id_sigaa" value="{{$notice->id_edital}}" disabled />
-    @error('id_sigaa')
-    <span class="text-red-500">{{ $message }}</span>
-    @enderror
 
     <div class="columns-3">
         <div class="w-full">
@@ -38,8 +33,7 @@
         </div>
         <div class="w-full">
             <label for="code">Código</label>
-            <input class="form-control" type="text" id="code" name="code" value="{{$notice->codigo_edital}}"
-                placeholder="Edital 01/2022 - Pibic/Unilab" />
+            <input class="form-control" type="text" id="code" name="code" placeholder="Edital 01/2022 - Pibic/Unilab" />
             @error('code')
             <span class="text-red-500">{{ $message }}</span>
             @enderror
@@ -60,7 +54,7 @@
         <div class="w-full">
             <label for="submission_start">Início da Submissão de projetos</label>
             <input class="form-control" type="text" datepicker datepicker-format="dd/mm/yyyy" id="submission_start"
-                name="submission_start" datepicker-locale="pt-br" value="{{$notice->data_inicio_submissao}}" />
+                name="submission_start" datepicker-locale="pt-br" />
             @error('submission_start')
             <span class="text-red-500">{{ $message }}</span>
             @enderror
@@ -68,7 +62,7 @@
         <div class="w-full">
             <label for="submission_end">Fim da submissão de projetos</label>
             <input class="form-control" type="text" datepicker datepicker-format="dd/mm/yyyy" id="submission_end"
-                name="submission_end" value="{{$notice->data_fim_submissao}}" />
+                name="submission_end" />
             @error('submission_end')
             <span class="text-red-500">{{ $message }}</span>
             @enderror
@@ -138,7 +132,7 @@
         <div class="w-full">
             <label for="execution_start">Início da execução dos projetos</label>
             <input class="form-control" type="text" datepicker datepicker-format="dd/mm/yyyy" id="execution_start"
-                name="execution_start" value="{{$notice->data_inicio_execucao}}" />
+                name="execution_start" />
             @error('execution_start')
             <span class="text-red-500">{{ $message }}</span>
             @enderror
@@ -146,7 +140,7 @@
         <div class="w-full">
             <label for="execution_end">Fim da execução dos projetos</label>
             <input class="form-control" type="text" datepicker datepicker-format="dd/mm/yyyy" id="execution_end"
-                name="execution_end" value="{{$notice->data_fim_execucao}}" />
+                name="execution_end" />
             @error('execution_end')
             <span class="text-red-500">{{ $message }}</span>
             @enderror

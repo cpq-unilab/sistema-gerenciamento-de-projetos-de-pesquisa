@@ -7,6 +7,13 @@
     <a href="{{route('admin.notices.list-to-import-sigaa')}}">Importar editais</a>
 </div>
 
-{{$notices}}
+@foreach ($notices as $notice)
+{{$notice->id}} -
+{{$notice->number}} -
+{{$notice->year}} -
+{{$notice->code}}
+<br>
+
+@endforeach
 
 @endsection

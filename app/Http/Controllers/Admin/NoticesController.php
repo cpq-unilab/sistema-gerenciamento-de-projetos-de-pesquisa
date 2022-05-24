@@ -29,11 +29,12 @@ class NoticesController extends Controller
 
     public function store(StoreNoticeRequest $request)
     {
+        $notice = Notice::create($request->validated());
+        if ($notice) {
+            return redirect()->route('admin.notices.index')->with(['success' => 'Edital criado com sucesso!']);
+        }
 
-        dd($request->all());
-        $notice = Notice::create($request->all());
-
-        return redirect()->route('admin.notices.index')->with('success', 'Notice created successfully.');
+        return redirect()->back()->with('danger', 'Erro ao tentar gravar o edital.');
     }
 
     public function show(Notice $notice)
